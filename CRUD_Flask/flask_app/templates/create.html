@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body class="container bg-dark">
+    <div class="text-white p-4 text-center">
+        <h1>Student registration</h1>
+    </div>
+    <form action="" method="post" class="form text-white">
+        <div class="row">
+            <div class="col">
+                <label class="form-label">First Name</label>
+                <input type="text" name="first_name" class="form-control">
+            </div>
+            <div class="col">
+                <label class="form-label">First Name</label>
+                <input type="text" name="last_name" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="form-label">City</label>
+                <select id="inputState" name="city"  class="form-control">
+                    <option value="La Paz">La Paz</option>
+                    <option value="Cochabamba">Cochabamba</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Beni">Beni</option>
+                    <option value="Pando">Pando</option>
+                    <option value="Potosi">Potosi</option>
+                    <option value="Oruro">Oruro</option>
+                    <option value="Tarija">Tarija</option>
+                    <option value="Chuquisaca">Chuquisaca</option>
+                </select>
+            </div>
+            <div class="col">
+                <label class="form-label">Semester</label>
+                <input type="number" name="semester" class="form-control">
+            </div>
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a href="/studentlist" class="btn btn-secondary">Go Back</a>
+        </div>
+    </form>
+</body>
+</html>

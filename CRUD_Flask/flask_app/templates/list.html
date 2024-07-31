@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student registration</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body class="container bg-dark">
+        <div class="">
+            <div class="text-white p-4 text-center">
+                <h1>Student list</h1>
+            </div>
+            <a href="/studentregister" class="btn btn-primary m-2">New Student</a>
+            <div class="">
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th>
+                                First name
+                            </th>
+                            <th>
+                                Last name
+                            </th>
+                            <th>
+                                city
+                            </th>
+                            <th>
+                                Semester
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in students: %}
+                            <tr>
+                                <td>{{ student.first_name }}</td>
+                                <td>{{ student.last_name }}</td>
+                                <td>{{ student.city }}</td>
+                                <td>{{ student.semester }}</td>
+                                <td>
+                                    <a href="/studentedit/{{student.id}}" class="btn btn-warning">Edit</a>
+                                    <a href="/studentdelete/{{student.id}}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </body>
+</html>
